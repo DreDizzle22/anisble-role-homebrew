@@ -1,0 +1,26 @@
+---
+## ------------------------------
+## Tasks for homebrew
+## ------------------------------
+
+- name: "List of Homebrew Core Packages that will be Installed"
+  debug:
+    msg: "{{ item }}"
+  with_items: "{{ homebrew_core_packages }}"
+
+- name: "Installing Homebrew Core Packages"
+  homebrew:
+    name: "{{ homebrew_packages }}"
+    state: "{{ homebrew_core_package_state }}"
+    update_homebrew: "{{ homebrew_core_update }}"
+
+- name: "List of Homebrew Cask Packages that will be Installed"
+  debug:
+    msg: "{{ item }}"
+  with_items: "{{ homebrew_cask_packages }}"
+
+- name: "Installing Homebrew Cask Packages"
+  homebrew:
+    name: "{{ homebrew_cask_packages }}"
+    state: "{{ homebrew_cask_package_state }}"
+    update_homebrew: "{{ homebrew_cask_update }}"

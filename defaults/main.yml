@@ -1,0 +1,53 @@
+---
+## ------------------------------
+## defaults for homebrew
+## ------------------------------
+
+# homebrew core variables
+# -----------------------
+homebrew_core_package_state: "present" # (Choices: head, latest, present, absent, linked, unlinked)
+homebrew_core_update: "yes" # (Choices: yes, no)
+homebrew_core_packages:
+  - azure-cli
+  - azure-functions-core-tools
+  - bash
+  - gdbm
+  - gettext
+  - git
+  - heroku
+  - heroku-node
+  - icu4c
+  - jq
+  - libevent
+  - libyaml
+  - ncurses
+ #- node
+  - nodenv
+  - oniguruma
+  - openssl
+  - pcre2
+  - pkg-config
+  - postgressql
+  - python
+  - readline
+  - sqlite
+  - tmux
+  - tree
+  - vifm
+  - xz
+  - yarn
+
+# homebrew cask variables
+# -----------------------
+homebrew_cask_package_state: "present" # (Choices: head, latest, present, absent, linked, unlinked)
+homebrew_cask_update: "yes" # (Choices: yes, no)
+homebrew_cask_packages:
+  - 1password
+  - beyond-compare
+  - dotnet
+  - iterm2
+  - postman
+  - slack
+  - sublime-text
+  - virtual-box
+  - visual-studio-code
