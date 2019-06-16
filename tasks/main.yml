@@ -10,7 +10,7 @@
 
 - name: "Installing Homebrew Core Packages"
   homebrew:
-    name: "{{ homebrew_packages }}"
+    name: "{{ homebrew_core_packages }}"
     state: "{{ homebrew_core_package_state }}"
     update_homebrew: "{{ homebrew_core_update }}"
 
